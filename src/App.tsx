@@ -1,5 +1,21 @@
+import Download from './components/Download';
+import FAQ from './components/FAQ';
+import Features from './components/Features';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Hero from './components/Hero';
+
 function App() {
-    return <div className="min-h-screen grid place-items-center text-blue-900 font-semibold text-5xl">Hello world</div>;
+    return (
+        <>
+            <Header />
+            <Hero />
+            <Features />
+            <Download />
+            <FAQ />
+            <Footer />
+        </>
+    );
 }
 
 export default App;
