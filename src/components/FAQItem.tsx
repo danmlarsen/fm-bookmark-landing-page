@@ -9,7 +9,10 @@ export default function FAQItem({ title, text }: AppProps) {
   const [showText, setShowText] = useState(false);
 
   return (
-    <li className="border-b" onClick={() => setShowText((prev) => !prev)}>
+    <li
+      className="cursor-pointer border-b"
+      onClick={() => setShowText((prev) => !prev)}
+    >
       <div className="flex justify-between">
         <h3>{title}</h3>
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">

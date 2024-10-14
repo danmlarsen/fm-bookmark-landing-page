@@ -1,6 +1,6 @@
 import FAQItem from "./FAQItem";
-import LinkButton from "./LinkButton";
-import SectionTitle from "./SectionTitle";
+import LinkButton from "../ui/LinkButton";
+import SectionTitle from "../ui/SectionTitle";
 
 const faqData = [
   {
@@ -24,17 +24,17 @@ const faqData = [
 export default function FAQ() {
   return (
     <section className="mb-36">
-      <div className="mx-8">
-        <div className="text-center">
+      <div className="mx-8 max-w-[540px] sm:mx-auto">
+        <div className="mb-16 text-center">
           <SectionTitle>Frequently Asked Questions</SectionTitle>
           <p>
             Here are some of our FAQs. If you have any other questions you’d
             like answered please feel free to email us.
           </p>
         </div>
-        <ul className="space-y-4">
+        <ul className="mb-12 space-y-4">
           {faqData.map((faqItem) => (
-            <FAQItem {...faqItem} />
+            <FAQItem key={faqItem.title} {...faqItem} />
           ))}
         </ul>
         <div className="text-center">

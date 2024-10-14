@@ -2,7 +2,7 @@ import logoChrome from "../assets/images/logo-chrome.svg";
 import logoFirefox from "../assets/images/logo-firefox.svg";
 import logoOpera from "../assets/images/logo-opera.svg";
 import DownloadCard from "./DownloadCard";
-import SectionTitle from "./SectionTitle";
+import SectionTitle from "../ui/SectionTitle";
 
 const cards = [
   {
@@ -26,16 +26,20 @@ export default function Download() {
   return (
     <section className="mb-36">
       <div className="mx-8">
-        <div className="space-y-4 text-center">
+        <div className="mb-10 max-w-xl space-y-4 text-center sm:mx-auto">
           <SectionTitle>Download the extension</SectionTitle>
           <p>
             We’ve got more browsers in the pipeline. Please do let us know if
             you’ve got a favourite you’d like us to prioritize.
           </p>
         </div>
-        <div className="grid justify-items-center gap-10">
-          {cards.map((card) => (
-            <DownloadCard {...card} />
+        <div className="mx-auto grid max-w-xl items-start justify-items-center gap-10 md:grid-cols-2 lg:min-h-[451px] lg:max-w-[911px] lg:grid-cols-3">
+          {cards.map((card, index) => (
+            <DownloadCard
+              key={card.browserName}
+              {...card}
+              className={`${index === 1 && "self-center"} ${index === 2 && "self-end md:col-span-2 lg:col-span-1"}`}
+            />
           ))}
         </div>
       </div>

@@ -6,12 +6,14 @@ const navItems = [
   { text: "Contact" },
 ];
 
-export default function Navigation() {
+export default function Navigation({ direction = "row" }) {
   return (
     <nav>
-      <ul className="space-y-8 text-sm uppercase tracking-widest">
+      <ul
+        className={`flex gap-8 text-sm uppercase tracking-widest ${direction === "row" ? "flex-row" : "flex-col md:flex-row"}`}
+      >
         {navItems.map((item) => (
-          <NavigationItem>{item.text}</NavigationItem>
+          <NavigationItem key={item.text}>{item.text}</NavigationItem>
         ))}
       </ul>
     </nav>

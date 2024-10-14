@@ -5,7 +5,9 @@ export default function NavigationItem({
 }) {
   return (
     <li>
-      <a href="#">{children}</a>
+      <a className="transition duration-300 hover:text-red" href="#">
+        {children}
+      </a>
     </li>
   );
 }

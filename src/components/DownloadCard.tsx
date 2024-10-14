@@ -1,4 +1,4 @@
-import LinkButton from "./LinkButton";
+import LinkButton from "../ui/LinkButton";
 
 import IconDots from "../assets/images/bg-dots.svg";
 
@@ -6,15 +6,17 @@ type AppProps = {
   image: string;
   browserName: string;
   minVersion: string;
+  className: string;
 };
 
 export default function DownloadCard({
   image,
   browserName,
   minVersion,
+  className,
 }: AppProps) {
   return (
-    <div className="w-full max-w-[280px] rounded-xl shadow-xl">
+    <div className={`w-full max-w-[280px] rounded-xl shadow-xl ${className}`}>
       <div className="grid justify-items-center gap-8 p-6 pt-10">
         <div>
           <img src={image} alt={`${browserName} logo`} />
