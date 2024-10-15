@@ -10,10 +10,13 @@ export default function FeatureButton({
   isActive = false,
 }: AppProps) {
   return (
-    <div
-      className={`p-4 ${isActive ? "border-b-4 border-b-red" : "border-b-2"}`}
-    >
-      <button onClick={onClick}>{children}</button>
+    <div className={` ${isActive ? "border-b-4 border-b-red" : "border-b-2"}`}>
+      <button
+        className="p-4 text-base transition duration-300 hover:text-red"
+        onClick={onClick}
+      >
+        {children}
+      </button>
     </div>
   );
 }

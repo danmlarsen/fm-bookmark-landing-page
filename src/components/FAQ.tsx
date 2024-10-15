@@ -32,7 +32,7 @@ export default function FAQ() {
             like answered please feel free to email us.
           </p>
         </div>
-        <ul className="mb-12 space-y-4">
+        <ul className="mb-12 space-y-4 divide-y border-y">
           {faqData.map((faqItem) => (
             <FAQItem key={faqItem.title} {...faqItem} />
           ))}

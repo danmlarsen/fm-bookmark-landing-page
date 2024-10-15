@@ -18,7 +18,9 @@ export default function Hero() {
             <StadiumShape alignment="right" />
           </div>
           <div className="mx-8 space-y-4 text-center lg:col-start-1 lg:row-start-1 lg:text-left">
-            <h1 className="text-3xl font-medium">A Simple Bookmark Manager</h1>
+            <h1 className="text-3xl font-medium tracking-tight md:text-5xl">
+              A Simple Bookmark Manager
+            </h1>
             <p>
               A clean and simple interface to organize your favourite websites.
               Open a new browser tab and see your sites load instantly. Try it
@@ -26,10 +28,7 @@ export default function Hero() {
             </p>
             <div className="flex justify-center gap-4 lg:justify-normal">
               <LinkButton to="#">Get it on Chrome</LinkButton>
-              <LinkButton
-                to="#"
-                className="border-white bg-white text-black hover:border-grayishBlue hover:text-grayishBlue"
-              >
+              <LinkButton to="#" type="secondary">
                 Get it on Firefox
               </LinkButton>
             </div>
