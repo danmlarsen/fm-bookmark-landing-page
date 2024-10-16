@@ -18,6 +18,8 @@ export default {
       },
       maxWidth: {
         "8xl": "90rem",
+        "6xl": "69.125rem",
+        xl: "33.75rem",
       },
     },
   },

@@ -37,7 +37,7 @@ export default function Features() {
       <div className="max-w-8xl mx-auto overflow-hidden">
         <div className="mx-8">
           <div className="mx-auto max-w-[730px] text-center">
-            <div className="mb-10">
+            <div className="mx-auto mb-10 max-w-xl">
               <SectionTitle>Features</SectionTitle>
               <p>
                 Our aim is to make it quick and easy for you to access your
@@ -57,7 +57,7 @@ export default function Features() {
               ))}
             </div>
           </div>
-          <div className="relative">
+          <div className="relative lg:min-h-[450px]">
             {<FeatureItem {...featureItemsData[selectedFeature]} />}
             <StadiumShape />
           </div>

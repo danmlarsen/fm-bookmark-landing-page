@@ -4,13 +4,13 @@ import LinkButton from "../ui/LinkButton";
 
 export default function Hero() {
   return (
-    <section className="mb-36">
+    <section className="mb-36 lg:mb-20">
       <div className="max-w-8xl mx-auto overflow-hidden">
-        <div className="grid gap-12 lg:mx-auto lg:max-w-6xl lg:grid-cols-2 lg:items-center">
-          <div className="relative min-h-[255px]">
+        <div className="grid gap-12 lg:mx-auto lg:max-w-7xl lg:grid-cols-2 lg:items-center">
+          <div className="relative min-h-[255px] lg:min-h-[486px]">
             <div>
               <img
-                className="w-full object-cover"
+                className="h-[460px] object-cover"
                 src={IllustrationHero}
                 alt="Hero illustration"
               />

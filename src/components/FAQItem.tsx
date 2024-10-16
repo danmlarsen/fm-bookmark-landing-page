@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
 type AppProps = {
@@ -28,7 +29,18 @@ export default function FAQItem({ title, text }: AppProps) {
           </svg>
         </div>
       </div>
-      {showText && <p className="mt-8 text-blue-900">{text}</p>}
+      <AnimatePresence>
+        {showText && (
+          <motion.p
+            initial={{ transformOrigin: "top", scaleY: 0, opacity: 0 }}
+            animate={{ transformOrigin: "top", scaleY: 1, opacity: 1 }}
+            exit={{ transformOrigin: "top", scaleY: 0, opacity: 0 }}
+            className="mt-8 text-blue-900"
+          >
+            {text}
+          </motion.p>
+        )}
+      </AnimatePresence>
     </li>
   );
 }

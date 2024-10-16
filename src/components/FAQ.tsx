@@ -24,7 +24,7 @@ const faqData = [
 export default function FAQ() {
   return (
     <section className="mb-36">
-      <div className="mx-8 max-w-[540px] sm:mx-auto">
+      <div className="mx-8 max-w-xl sm:mx-auto">
         <div className="mb-16 text-center">
           <SectionTitle>Frequently Asked Questions</SectionTitle>
           <p>

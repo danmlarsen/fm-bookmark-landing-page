@@ -7,7 +7,7 @@ export default function Header() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   return (
-    <header className="mx-8 mb-20 mt-10 flex items-center justify-between lg:mx-auto lg:max-w-6xl">
+    <header className="mx-8 mb-20 mt-10 flex items-center justify-between lg:mx-auto lg:mb-28 lg:max-w-6xl">
       <div>
         <Logo />
       </div>
