@@ -1,7 +1,11 @@
-export default function Logo({ className = "" }) {
+export default function Logo({
+  className = "",
+  bgColor = "#fff",
+  fillColor = "#5267DF",
+}) {
   return (
     <svg
-      className={`${className}`}
+      className={`${className} transition-all duration-300`}
       width="148"
       height="25"
       xmlns="http://www.w3.org/2000/svg"
@@ -13,10 +17,10 @@ export default function Logo({ className = "" }) {
           fillRule="nonzero"
         />
         <g>
-          <circle fill="#5267DF" cx="12.5" cy="12.5" r="12.5" />
+          <circle fill={fillColor} cx="12.5" cy="12.5" r="12.5" />
           <path
             d="M9 9v10l3.54-3.44L16.078 19V9a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z"
-            fill="#FFF"
+            fill={bgColor}
           />
         </g>
       </g>

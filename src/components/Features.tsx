@@ -6,7 +6,6 @@ import Illustration3 from "../assets/images/illustration-features-tab-3.svg";
 import FeatureItem from "./FeatureItem";
 import SectionTitle from "../ui/SectionTitle";
 import FeatureButton from "./FeatureButton";
-import StadiumShape from "../ui/StadiumShape";
 
 const featureItemsData = [
   {
@@ -33,10 +32,10 @@ export default function Features() {
   const [selectedFeature, setSelectedFeature] = useState(0);
 
   return (
-    <section className="mb-36">
+    <section className="lg:mb-26 mb-36">
       <div className="max-w-8xl mx-auto overflow-hidden">
         <div className="mx-8">
-          <div className="mx-auto max-w-[730px] text-center">
+          <div className="text-center md:mx-auto md:max-w-3xl">
             <div className="mx-auto mb-10 max-w-xl">
               <SectionTitle>Features</SectionTitle>
               <p>
@@ -57,9 +56,8 @@ export default function Features() {
               ))}
             </div>
           </div>
-          <div className="relative lg:min-h-[450px]">
+          <div className="relative lg:min-h-[500px]">
             {<FeatureItem {...featureItemsData[selectedFeature]} />}
-            <StadiumShape />
           </div>
         </div>
       </div>

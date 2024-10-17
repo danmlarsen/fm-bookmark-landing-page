@@ -13,7 +13,7 @@ export default function Footer() {
             <p className="text-[12px] font-medium uppercase leading-[40px] tracking-[4.62px]">
               35,000+ already joined
             </p>
-            <h2 className="text-2xl font-medium">
+            <h2 className="text-2xl font-medium leading-tight md:text-3xl md:leading-tight">
               Stay up-to-date with what we’re doing
             </h2>
           </div>
@@ -23,7 +23,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="bg-blue-900 py-10 text-center">
-        <div className="mx-8 flex flex-col gap-12 md:mx-auto md:max-w-6xl md:flex-row">
+        <div className="mx-8 flex flex-col gap-12 md:max-w-6xl md:flex-row lg:mx-auto">
           <div className="flex justify-center">
             <Logo />
           </div>

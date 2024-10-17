@@ -9,14 +9,22 @@ export default function LinkButton({
   to = "#",
   type = "primary",
 }: AppProps) {
-  const baseStyles =
-    "inline-flex items-center justify-center min-w-28 min-h-12 rounded-md border px-4 py-3 text-center text-sm shadow-md transition duration-300 ";
+  let styles =
+    "inline-flex items-center justify-center min-w-28 rounded-md border px-2 sm:px-4 text-center font-medium shadow-md shadow-transparentBlue transition duration-300 ";
+
+  if (!type || type === "primary")
+    styles +=
+      " min-h-12 border-blue-500 bg-blue-500 text-xs text-white hover:bg-white hover:text-blue-500";
+  if (type === "secondary")
+    styles +=
+      " min-h-12 border-white bg-white text-xs text-black hover:border-grayishBlue hover:text-grayishBlue";
+  if (type === "tertiary")
+    styles +=
+      " text-xxs min-h-10 border-red bg-red text-white hover:bg-white hover:text-red";
+  if (type === "mobile") styles += " w-full h-12";
 
   return (
-    <a
-      className={`${baseStyles} ${type === "primary" && "border-blue-500 bg-blue-500 text-white hover:bg-white hover:text-blue-500"} ${type === "secondary" && "border-white bg-white text-black hover:border-grayishBlue hover:text-grayishBlue"} ${type === "tertiary" && "border-red bg-red text-white hover:bg-white hover:text-red"}`}
-      href={to}
-    >
+    <a className={`${styles}`} href={to}>
       {children}
     </a>
   );

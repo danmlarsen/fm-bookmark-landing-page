@@ -1,11 +1,13 @@
 export default function NavigationItem({
   children,
+  className = "",
 }: {
   children: React.ReactNode;
+  className: string;
 }) {
   return (
-    <li>
-      <a className="transition duration-300 hover:text-red" href="#">
+    <li className={`${className}`}>
+      <a className={`transition duration-300 hover:text-red`} href="#">
         {children}
       </a>
     </li>

@@ -1,7 +1,7 @@
 import NavigationItem from "./NavigationItem";
 import LinkButton from "../ui/LinkButton";
 
-const navItems = [
+export const navItems = [
   { text: "Features" },
   { text: "Pricing" },
   { text: "Contact" },
@@ -9,15 +9,27 @@ const navItems = [
 
 export default function Navigation({ direction = "row", type = "header" }) {
   return (
-    <nav className="flex justify-center gap-12 md:items-center">
+    <nav
+      className={`flex justify-center gap-12 md:items-center ${type === "mobile" && "flex-col"}`}
+    >
       <ul
-        className={`flex gap-8 text-sm uppercase tracking-widest ${direction === "row" ? "flex-row" : "flex-col md:flex-row"}`}
+        className={`flex items-center uppercase tracking-widest ${direction === "row" ? "flex-row" : "flex-col md:flex-row"} ${type === "mobile" ? "divide-y border-y text-[20px]" : "text-xxs gap-8"}`}
       >
         {navItems.map((item) => (
-          <NavigationItem key={item.text}>{item.text}</NavigationItem>
+          <NavigationItem
+            key={item.text}
+            className={
+              type === "mobile"
+                ? "flex w-full items-center justify-center py-6"
+                : ""
+            }
+          >
+            {item.text}
+          </NavigationItem>
         ))}
       </ul>
-      {type === "footer" ? "" : <LinkButton type="tertiary">LOGIN</LinkButton>}
+      {type === "header" && <LinkButton type="tertiary">LOGIN</LinkButton>}
+      {type === "mobile" && <LinkButton type="mobile">LOGIN</LinkButton>}
     </nav>
   );
 }

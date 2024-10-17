@@ -16,7 +16,9 @@ export default function DownloadCard({
   className,
 }: AppProps) {
   return (
-    <div className={`w-full max-w-[280px] rounded-xl shadow-xl ${className}`}>
+    <div
+      className={`shadow-transparentBlue w-full max-w-[280px] rounded-xl text-center shadow-lg ${className}`}
+    >
       <div className="grid justify-items-center gap-8 p-6 pt-10">
         <div>
           <img src={image} alt={`${browserName} logo`} />
