@@ -10,7 +10,7 @@ export default function LinkButton({
   type = "primary",
 }: AppProps) {
   let styles =
-    "inline-flex items-center justify-center min-w-28 rounded-md border px-2 sm:px-4 lg:px-6 text-center font-medium shadow-md shadow-transparentBlue transition duration-300 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-offset-2";
+    "inline-flex items-center justify-center min-w-28 rounded-md border px-2 sm:px-4 lg:px-6 text-center font-medium shadow-md shadow-transparentBlue transition duration-300 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-500 focus-visible:ring-offset-2";
 
   if (!type || type === "primary")
     styles +=

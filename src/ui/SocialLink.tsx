@@ -5,7 +5,7 @@ export default function SocialLink({
 }) {
   return (
     <a
-      className="fill-white transition duration-300 hover:fill-red focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-offset-2"
+      className="fill-white transition duration-300 hover:fill-red focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
       href="#"
     >
       {children}

@@ -14,7 +14,7 @@ export default function FeatureButton({
   return (
     <div className={`relative border-b transition duration-300`}>
       <button
-        className="block w-full py-4 text-base tracking-[0.53px] transition duration-300 hover:text-red focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-offset-2 lg:py-0 lg:pb-6"
+        className="block w-full py-4 text-base tracking-[0.53px] transition duration-300 hover:text-red focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-500 focus-visible:ring-offset-2 lg:py-0 lg:pb-6"
         onClick={onClick}
       >
         {children}
