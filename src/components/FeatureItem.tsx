@@ -10,22 +10,26 @@ type AppProps = {
 
 export default function FeatureItem({ image, title, text }: AppProps) {
   return (
-    <AnimatePresence>
+    <AnimatePresence initial={false}>
       <motion.div
         key={title}
         initial={{ x: "100%", opacity: 0 }}
         animate={{ x: "0", opacity: 1 }}
         transition={{ duration: 0.5, type: "spring" }}
-        className="grid w-full items-center justify-items-center gap-x-32 gap-y-[69px] md:mx-auto md:max-w-3xl lg:mx-auto lg:max-w-6xl lg:grid-cols-2"
+        className="grid w-full items-center justify-items-center gap-x-[7.8125rem] gap-y-[4.3125rem] md:mx-auto md:max-w-3xl lg:mx-auto lg:max-w-6xl lg:grid-cols-[33.5rem_auto]"
       >
         <div className="relative">
-          <img src={image} alt="" />
+          <img src={image} alt="Feature Illustration" />
           <StadiumShape />
         </div>
-        <div className="space-y-4 text-center lg:text-left">
-          <h3 className="text-2xl font-medium md:text-3xl">{title}</h3>
-          <p>{text}</p>
-          <LinkButton to="#">More Info</LinkButton>
+        <div className="text-center lg:text-left">
+          <div className="mb-8 space-y-4">
+            <h3 className="text-2xl font-medium md:text-3xl">{title}</h3>
+            <p>{text}</p>
+          </div>
+          <div>
+            <LinkButton to="#">More Info</LinkButton>
+          </div>
         </div>
       </motion.div>
     </AnimatePresence>

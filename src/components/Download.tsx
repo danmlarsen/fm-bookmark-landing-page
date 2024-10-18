@@ -24,16 +24,16 @@ const cards = [
 
 export default function Download() {
   return (
-    <section className="mb-36">
+    <section className="mb-32 lg:mb-36">
       <div className="mx-8">
-        <div className="mb-10 max-w-xl space-y-4 text-center sm:mx-auto">
+        <div className="mb-[3.375rem] max-w-xl space-y-4 text-center sm:mx-auto">
           <SectionTitle>Download the extension</SectionTitle>
           <p>
             We’ve got more browsers in the pipeline. Please do let us know if
             you’ve got a favourite you’d like us to prioritize.
           </p>
         </div>
-        <div className="mx-auto grid max-w-xl items-start justify-items-center gap-10 md:grid-cols-2 lg:min-h-[451px] lg:max-w-[911px] lg:grid-cols-3">
+        <div className="mx-auto grid max-w-xl items-start justify-items-center gap-[2.125rem] md:grid-cols-2 lg:min-h-[28.1875rem] lg:max-w-[56.9375rem] lg:grid-cols-3">
           {cards.map((card, index) => (
             <DownloadCard
               key={card.browserName}

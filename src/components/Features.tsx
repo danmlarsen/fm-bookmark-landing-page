@@ -32,11 +32,11 @@ export default function Features() {
   const [selectedFeature, setSelectedFeature] = useState(0);
 
   return (
-    <section className="lg:mb-26 mb-36">
+    <section className="mb-20 lg:mb-[5.25rem]">
       <div className="max-w-8xl mx-auto overflow-hidden">
         <div className="mx-8">
           <div className="text-center md:mx-auto md:max-w-3xl">
-            <div className="mx-auto mb-10 max-w-xl">
+            <div className="mx-auto mb-[4.375rem] max-w-xl space-y-4">
               <SectionTitle>Features</SectionTitle>
               <p>
                 Our aim is to make it quick and easy for you to access your
@@ -44,7 +44,7 @@ export default function Features() {
                 you can access them on the go.
               </p>
             </div>
-            <div className="mb-20 md:grid md:grid-cols-3">
+            <div className="mb-[4.625rem] max-w-[45.625rem] md:grid md:grid-cols-3">
               {featureItemsData.map((feature, index) => (
                 <FeatureButton
                   onClick={() => setSelectedFeature(index)}
@@ -56,7 +56,7 @@ export default function Features() {
               ))}
             </div>
           </div>
-          <div className="relative lg:min-h-[500px]">
+          <div className="relative lg:min-h-[31.25rem]">
             {<FeatureItem {...featureItemsData[selectedFeature]} />}
           </div>
         </div>

@@ -1,3 +1,5 @@
+import { AnimatePresence, motion } from "framer-motion";
+
 type AppProps = {
   children: React.ReactNode;
   onClick: () => void;
@@ -10,13 +12,23 @@ export default function FeatureButton({
   isActive = false,
 }: AppProps) {
   return (
-    <div className={` ${isActive ? "border-b-4 border-b-red" : "border-b-2"}`}>
+    <div className={`relative border-b transition duration-300`}>
       <button
-        className="p-4 text-base transition duration-300 hover:text-red"
+        className="block w-full py-4 text-base tracking-[0.53px] transition duration-300 hover:text-red focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-offset-2 lg:py-0 lg:pb-6"
         onClick={onClick}
       >
         {children}
       </button>
+      <AnimatePresence initial={false}>
+        {isActive && (
+          <motion.div
+            initial={{ opacity: 0, y: "100%" }}
+            animate={{ opacity: 1, y: "0" }}
+            exit={{ opacity: 0, y: "100%" }}
+            className="absolute bottom-0 left-0 right-0 h-1 bg-red"
+          ></motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

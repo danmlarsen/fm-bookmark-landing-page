@@ -2,8 +2,10 @@ import { FormEvent, useState } from "react";
 
 import IconError from "../assets/images/icon-error.svg";
 
+// NOTE: I would of course use real validation on a live site.
 function isValidEmail(email: string) {
-  if (email.length === 0 || !email.includes("@")) return false;
+  if (email.trim().length === 0 || !email.includes("@")) return false;
+  return true;
 }
 
 export default function Newsletter() {
@@ -28,13 +30,14 @@ export default function Newsletter() {
         >
           <div className="relative flex grow flex-col">
             <input
-              className={`h-full min-h-12 rounded-md px-5 text-xs text-black transition duration-300 placeholder:text-xs focus:outline-none focus:ring-2 focus:ring-blue-900 focus:ring-offset-2`}
+              className={`h-full min-h-12 rounded-md px-5 text-xs text-blue-900 transition duration-300 placeholder:text-xs focus:outline-none focus:ring-2 focus:ring-blue-900 focus:ring-offset-2`}
               type="text"
-              name=""
-              id=""
+              name="email"
+              id="email"
               placeholder="Enter your email address"
               onChange={(e) => setEmail(e.target.value)}
               value={email}
+              aria-label="Enter your email address"
             />
             {submitted && !isValidEmail(email) && (
               <img
@@ -46,7 +49,7 @@ export default function Newsletter() {
           </div>
 
           {submitted && !isValidEmail(email) && (
-            <p className="px-3 text-left text-[10px] font-medium italic tracking-wider">
+            <p className="px-3 text-left text-[0.625rem] font-medium italic tracking-wider">
               Whoops, make sure it's an email
             </p>
           )}

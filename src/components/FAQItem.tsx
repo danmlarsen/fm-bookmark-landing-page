@@ -11,15 +11,21 @@ export default function FAQItem({ title, text }: AppProps) {
 
   return (
     <li className="py-5">
-      <div
-        className="flex cursor-pointer justify-between transition duration-300 hover:text-red"
+      <button
+        className="flex w-full cursor-pointer items-center justify-between pr-6 transition duration-300 hover:text-red focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
         onClick={() => setShowText((prev) => !prev)}
       >
-        <h3>{title}</h3>
-        <div
+        <p>{title}</p>
+        <span
           className={`flex items-center transition duration-300 ${showText ? "stroke-red [transform:rotateX(180deg)]" : "stroke-blue-500"}`}
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="12"
+            role="img"
+          >
+            <title>Arrow icon</title>
             <path
               fill="none"
               stroke="inherit"
@@ -27,8 +33,8 @@ export default function FAQItem({ title, text }: AppProps) {
               d="M1 1l8 8 8-8"
             />
           </svg>
-        </div>
-      </div>
+        </span>
+      </button>
       <AnimatePresence>
         {showText && (
           <motion.p

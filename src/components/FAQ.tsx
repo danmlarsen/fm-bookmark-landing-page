@@ -23,16 +23,16 @@ const faqData = [
 
 export default function FAQ() {
   return (
-    <section className="mb-36">
-      <div className="mx-8 max-w-xl sm:mx-auto">
-        <div className="mb-16 text-center">
+    <section className="mb-[9.375rem]">
+      <div className="mx-8 max-w-[33.8125rem] sm:mx-auto">
+        <div className="mb-14 space-y-4 text-center">
           <SectionTitle>Frequently Asked Questions</SectionTitle>
           <p>
             Here are some of our FAQs. If you have any other questions you’d
             like answered please feel free to email us.
           </p>
         </div>
-        <ul className="mb-12 space-y-4 divide-y border-y">
+        <ul className="mb-10 divide-y border-y">
           {faqData.map((faqItem) => (
             <FAQItem key={faqItem.title} {...faqItem} />
           ))}
