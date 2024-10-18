@@ -25,7 +25,7 @@ export default function FAQ() {
   return (
     <section className="mb-[9.375rem]">
       <div className="mx-8 max-w-[33.8125rem] sm:mx-auto">
-        <div className="mb-14 space-y-4 text-center">
+        <div className="mx-auto mb-14 max-w-lg space-y-4 text-center">
           <SectionTitle>Frequently Asked Questions</SectionTitle>
           <p>
             Here are some of our FAQs. If you have any other questions you’d
