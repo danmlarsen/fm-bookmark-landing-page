@@ -10,10 +10,10 @@ const navItems = [
 export default function Navigation({ direction = "row", type = "header" }) {
   return (
     <nav
-      className={`flex justify-center gap-10 md:items-center ${type === "mobile" && "flex-col"}`}
+      className={`flex justify-center gap-10 md:items-center ${type === "mobile" ? "flex-col" : ""}`}
     >
       <ul
-        className={`flex items-center uppercase tracking-widest ${direction === "row" ? "flex-row" : "flex-col md:flex-row"} ${type === "mobile" ? "divide-y border-y text-[1.25rem]" : "text-xxs gap-11"}`}
+        className={`flex items-center uppercase tracking-widest ${direction === "row" ? "flex-row" : "flex-col md:flex-row"} ${type === "mobile" ? "divide-y border-y text-[1.25rem]" : "gap-11 text-xxs"}`}
       >
         {navItems.map((item) => (
           <NavigationItem

@@ -28,7 +28,7 @@ export default function DownloadCard({
           <img src={image} alt={`${browserName} logo`} />
         </div>
         <div className="space-y-2">
-          <h3 className="text-[1.25rem] font-medium tracking-[0.25px]">
+          <h3 className="text-[1.25rem] font-medium tracking-[0.25px] text-blue-900">
             Add to {browserName}
           </h3>
           <p className="text-sm">Minimum version {minVersion}</p>

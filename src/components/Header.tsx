@@ -38,7 +38,7 @@ export default function Header() {
         </motion.div>
       )}
       <header
-        className={`relative z-50 mx-8 mb-20 mt-10 flex items-center justify-between px-1 lg:mx-auto lg:mb-[6.5625rem] lg:mt-12 lg:max-w-6xl`}
+        className={`relative z-50 mx-8 mb-20 mt-10 flex items-center justify-between px-1 text-blue-900 lg:mx-auto lg:mb-[6.5625rem] lg:mt-12 lg:max-w-6xl`}
       >
         <div>
           <Logo

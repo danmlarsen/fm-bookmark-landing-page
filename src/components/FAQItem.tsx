@@ -15,7 +15,7 @@ export default function FAQItem({ title, text }: AppProps) {
         className="flex w-full cursor-pointer items-center justify-between pr-6 transition duration-300 hover:text-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
         onClick={() => setShowText((prev) => !prev)}
       >
-        <p>{title}</p>
+        <span className="text-blue-900">{title}</span>
         <span
           className={`flex items-center transition duration-300 ${showText ? "stroke-red [transform:rotateX(180deg)]" : "stroke-blue-500"}`}
         >
@@ -41,7 +41,7 @@ export default function FAQItem({ title, text }: AppProps) {
             initial={{ transformOrigin: "top", scaleY: 0, opacity: 0 }}
             animate={{ transformOrigin: "top", scaleY: 1, opacity: 1 }}
             exit={{ transformOrigin: "top", scaleY: 0, opacity: 0 }}
-            className="mt-8 text-blue-900"
+            className="mt-8 text-blue-900/75"
           >
             {text}
           </motion.p>

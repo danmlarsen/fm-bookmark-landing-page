@@ -23,21 +23,22 @@ export default function Newsletter() {
   }
 
   return (
-    <form action="" onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} noValidate>
       <div className="flex flex-col gap-4 sm:flex-row">
         <div
           className={`flex grow flex-col rounded-md ${submitted && !isValidEmail(email) ? "bg-red ring-2 ring-red" : ""}`}
         >
           <div className="relative flex grow flex-col">
             <input
-              className={`h-full min-h-12 rounded-md px-5 text-xs text-blue-900 transition duration-300 placeholder:text-xs focus:outline-none focus:ring-2 focus:ring-blue-900 focus:ring-offset-2`}
-              type="text"
+              className={`h-full min-h-12 rounded-md px-5 text-xs text-blue-900 transition duration-300 placeholder:text-xs placeholder:text-blue-900/25 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:ring-offset-2`}
+              type="email"
               name="email"
               id="email"
               placeholder="Enter your email address"
               onChange={(e) => setEmail(e.target.value)}
               value={email}
               aria-label="Enter your email address"
+              required
             />
             {submitted && !isValidEmail(email) && (
               <img
@@ -55,7 +56,7 @@ export default function Newsletter() {
           )}
         </div>
         <div className="flex flex-col">
-          <button className="shadow-transparentBlue inline-flex min-h-12 min-w-32 items-center justify-center rounded-md border border-red bg-red px-4 text-center text-xs font-medium text-white shadow-md transition duration-300 hover:bg-white hover:text-red focus:outline-none focus:ring-2 focus:ring-blue-900 focus:ring-offset-2">
+          <button className="inline-flex min-h-12 min-w-32 items-center justify-center rounded-md border border-red bg-red px-4 text-center text-xs font-medium text-white shadow-md shadow-transparentBlue transition duration-300 hover:bg-white hover:text-red focus:outline-none focus:ring-2 focus:ring-blue-900 focus:ring-offset-2">
             Contact Us
           </button>
         </div>
