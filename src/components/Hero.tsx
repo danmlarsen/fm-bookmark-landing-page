@@ -5,8 +5,8 @@ import LinkButton from "../ui/LinkButton";
 export default function Hero() {
   return (
     <section className="mb-32 lg:mb-[5.625rem]">
-      <div className="max-w-8xl mx-auto overflow-x-clip">
-        <div className="grid gap-12 gap-x-6 md:mx-auto md:max-w-3xl lg:max-w-[83.125rem] lg:grid-cols-[auto_40.625rem] lg:items-center">
+      <div className="mx-auto max-w-8xl overflow-x-clip">
+        <div className="grid gap-12 gap-x-5 md:mx-auto md:max-w-3xl lg:max-w-[83.125rem] lg:grid-cols-[auto_40.625rem] lg:items-center">
           <div className="relative min-h-[15.9375rem] lg:min-h-[30.375rem]">
             <div>
               <img

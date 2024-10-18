@@ -10,6 +10,7 @@ const navItems = [
 export default function Navigation({ direction = "row", type = "header" }) {
   return (
     <nav
+      aria-label={type === "footer" ? "Footer navigation" : "Main navigation"}
       className={`flex justify-center gap-10 md:items-center ${type === "mobile" ? "flex-col" : ""}`}
     >
       <ul
