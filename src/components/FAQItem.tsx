@@ -14,7 +14,7 @@ export default function FAQItem({ title, text }: AppProps) {
         className="flex w-full cursor-pointer items-center justify-between pr-6 transition duration-300 hover:text-red focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
         onClick={() => setShowText((prev) => !prev)}
       >
-        <span className="text-blue-900">{title}</span>
+        <span className="text-left text-blue-900">{title}</span>
         <span
           className={`flex items-center transition duration-300 ${showText ? "stroke-red [transform:rotateX(180deg)]" : "stroke-blue-500"}`}
         >
