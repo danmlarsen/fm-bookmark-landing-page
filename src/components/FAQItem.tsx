@@ -1,4 +1,3 @@
-import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
 type AppProps = {
@@ -35,18 +34,11 @@ export default function FAQItem({ title, text }: AppProps) {
           </svg>
         </span>
       </button>
-      <AnimatePresence>
-        {showText && (
-          <motion.p
-            initial={{ transformOrigin: "top", scaleY: 0, opacity: 0 }}
-            animate={{ transformOrigin: "top", scaleY: 1, opacity: 1 }}
-            exit={{ transformOrigin: "top", scaleY: 0, opacity: 0 }}
-            className="mt-8 text-blue-900/75"
-          >
-            {text}
-          </motion.p>
-        )}
-      </AnimatePresence>
+      <div
+        className={`overflow-hidden transition-all duration-500 ${showText ? "max-h-80 opacity-100" : "max-h-0 opacity-0"}`}
+      >
+        <p className="mt-8 text-blue-900/75">{text}</p>
+      </div>
     </li>
   );
 }
