@@ -1,6 +1,7 @@
 import { FormEvent, useState } from "react";
 
 import IconError from "../assets/images/icon-error.svg";
+import toast from "react-hot-toast";
 
 // NOTE: I would of course use real validation on a live site.
 function isValidEmail(email: string) {
@@ -17,6 +18,7 @@ export default function Newsletter() {
     setSubmitted(true);
 
     if (isValidEmail(email)) {
+      toast.success('Successfully signed up to the newsletter!')
       setEmail("");
       setSubmitted(false);
     }

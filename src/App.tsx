@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import Download from "./components/Download";
 import FAQ from "./components/FAQ";
 import Features from "./components/Features";
@@ -8,6 +9,7 @@ import Hero from "./components/Hero";
 function App() {
   return (
     <>
+      <Toaster />
       <Header />
       <main>
         <Hero />
